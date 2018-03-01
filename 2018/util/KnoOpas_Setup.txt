@@ -1,10 +1,12 @@
 Notes for setting up KonOpas:
 
 Configure your system:
-1. Download PHP, unzip to c:\php
+1. Download PHP 7.1 from http://windows.php.net/download
+1a unzip to c:\php
 2. Copy php.ini-development to php.ini
 3. Edit php.ini
    Uncomment: extension=php_openssl.dll
+   Uncomment: extension_dir = "ext"
    Change line: 
      from: error_reporting = E_ALL
 	 to:   error_reporting = E_ALL ^ E_DEPRECATED
