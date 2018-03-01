@@ -46,11 +46,15 @@ function gdrive2json($key, $gid = '0', $version = 'ccc') {
 	$rc = url_fetch($url, $csv_str);
 	if ($rc) exit("URL fetch error: $rc");
 
-// DPM: DEBUGGING
-$csv_file = "../util/$key.$gid.csv";
-$handle = fopen($csv_file, 'w') or die('Cannot open file:' + $csv_file);
-fwrite($handle, $csv_str);
-fclose($handle);
+	if (preg_match('|<html.*<head.*</head>.*<body.*</body>.*</html>|s', $csv_str)) {
+		exit("ERROR: CSV content appears to be an HTML page.\nPlease set document permissions to be  publically accessible via link without any username or password.");
+	}
+	
+	// DPM: DEBUGGING
+	$csv_file = "../util/$key.$gid.csv";
+	$handle = fopen($csv_file, 'w') or die('Cannot open file:' + $csv_file);
+	fwrite($handle, $csv_str);
+	fclose($handle);
 
 	$csv = new parseCSV("$csv_str\n");
 	$a = $csv->data;
