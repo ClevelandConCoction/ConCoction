@@ -1,4 +1,4 @@
-id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,people.0.name,people.1.id,people.1.name,people.2.id,people.2.name,people.3.id,people.3.name,people.4.id,people.4.name,people.5.id,people.5.name,people.6.id,people.6.name,people.7.id,people.7.name,227
+id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,people.0.name,people.1.id,people.1.name,people.2.id,people.2.name,people.3.id,people.3.name,people.4.id,people.4.name,people.5.id,people.5.name,people.6.id,people.6.name,people.7.id,people.7.name,230
 2,Registration,,Garfield B/C,2018-03-09,10:00,720,,,,,,,,,,,,,,,,,,,,,
 1,Gaming (24/7),,Hayes & Pre-Fun,2018-03-09,10:00,840,,gaming,,,,,,,,,,,,,,,,,,,
 3,Security & Ops (24/7),,Virgo,2018-03-09,10:00,840,,,,,,,,,,,,,,,,,,,,,
@@ -229,7 +229,7 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 187,Publishing in the 21st Century,,McKinley B,2018-03-11,10:00,60,"How do you submit? How do you figure out who to submit to? What do I need to submit? How do I research editors, publishers, agents, and markets? All these will be discussed, with a Power Point presentation and examples of submission materials.",,,,3,A. King,53,M. Timmins,42,L. Robertson,21,D. Willis,85,W. Kincade,,,,,,,
 183,Art Show,,McKinley C,2018-03-11,10:00,270,,,,,,,,,,,,,,,,,,,,,
 188,Signal Boost,,Pegasus,2018-03-11,10:00,60,Like the Geek and Sundry videos: Come and tell us about your favorite thing that no one has ever heard of. Bring your notebooks and pencils so you can plan your summer binges.,,,,39,K. Tomb,,,,,,,,,,,,,,,
-190,There's More in Your Closet Than You Think,,McKinley A,2018-03-11,11:00,60,Using and repurposing items for costumes.,,,,,,,,,,,,,,,,,,,,
+190,There's More in Your Closet Than You Think,MOVED,McKinley A,2018-03-11,11:00,60,Using and repurposing items for costumes.,,,,,,,,,,,,,,,,,,,,
 191,What’s in a Genre?,MOVED,Pres Boardroom,2018-03-11,11:00,60,"Science Fantasy, Slipstream, Speculative Fiction - let's get down and unclassifiable and explore what we mean when we define a story's genre.",,,,55,M. Vibbert,33,J. Gribble,53,M. Timmins,36,K. Herkes,9,B. Doran,,,,,,,
 192,Author Showcase (Session 6),,Pegasus,2018-03-11,12:00,60,"Listen to your favorite authors read excerpts from released and soon to be released works. Find your next great read. Ask questions, and discover the new worlds.",,,,3,A. King,48,M. Flohr,15,C. Matthews,4,A. Matthews,54,M. Turzillo,,,,,,,
 193,Private Science Fiction Writing Workshop,,Pres Boardroom,2018-03-11,12:00,120,"Local writers Marie Vibbert and Mike Substelny will critique stories by three or four aspiring science fiction writers to help make them publishable. A maximum of four participants will be accepted in this workshop.
@@ -275,3 +275,6 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 224,Ecchi-sensei’s Indecent Improv eXtravaganza!,ADDITION,McKinley A,2018-03-11,00:00,120,The Confused Greenies & Ecchi-sensei invite to you an after dark improv game show for mature audiences with immature senses of humor! 18+,performance,improv,,80,The Confused Greenies,,,,,,,,,,,,,,,
 225,"Cosplayers, Cocktails & Questions!",ADDITION,Pres Boardroom,2018-03-10,22:00,60,,cosplay,panel,,92,Knightmage,86,Mogchelle,87,Princess Morgan,90,Stitches,94,M. Harpster,,,,,,,
 226,Q&A with Sean Owen Roberts,ADDITION,McKinley A,2018-03-11,11:00,60,,panel,,,93,S. Owen Roberts,,,,,,,,,,,,,,,
+227,Coffee Hour with Tony Isabella,ADDITION,Garfield C,2018-03-11,10:00,60,,panel,,,88,T. Isabella,,,,,,,,,,,,,,,
+228,The Basics of Thermoplastics,ADDITION,Garfield C,2018-03-11,12:00,60,,panel,,,86,Mogchelle,,,,,,,,,,,,,,,
+229,"The Rock N' Roll Devil ""Pete Mako""",UPDATED,McKinley A,2018-03-09,22:00,60,"Music about Monsters, cars, Pop Culture, and all wrapped up in devil horns. Original and cover music in an acoustic setting.",performance,,,66,P. Mako,,,,,,,,,,,,,,,
