@@ -1,7 +1,7 @@
-id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,people.0.name,people.1.id,people.1.name,people.2.id,people.2.name,people.3.id,people.3.name,people.4.id,people.4.name,people.5.id,people.5.name,people.6.id,people.6.name,people.7.id,people.7.name,233
+id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,people.0.name,people.1.id,people.1.name,people.2.id,people.2.name,people.3.id,people.3.name,people.4.id,people.4.name,people.5.id,people.5.name,people.6.id,people.6.name,people.7.id,people.7.name,237
 1,Gaming (24/7),,Hayes & Pre-Fun,2018-03-09,10:00,840,,gaming,,,,,,,,,,,,,,,,,,,
 2,Registration,,Garfield B/C,2018-03-09,10:00,720,,Registration,,,,,,,,,,,,,,,,,,,
-3,Security & Ops (24/7),,Virgo,2018-03-09,10:00,840,,operations,,,,,,,,,,,,,,,,,,,
+3,Operations (24/7),,Hospitality Suite 185,2018-03-09,10:00,840,,operations,,,,,,,,,,,,,,,,,,,
 4,Deadlands: Night Train,,Hayes & Pre-Fun,2018-03-09,12:00,240,A Classic Deadlands: Weird West Adventure,gaming,,,8,B. Barrington,,,,,,,,,,,,,,,
 5,Exhibit Hall,,Hayes,2018-03-09,12:00,480,,vendors,,,,,,,,,,,,,,,,,,,
 6,Open Gaming (all ages),,Grant B/C,2018-03-09,12:00,120,Come check out the Kid’s room and all the games available to play. (All Ages),kids,gaming,,,,,,,,,,,,,,,,,,
@@ -79,7 +79,7 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 216,Open Filk,ADDITION,Pegasus,2018-03-09,23:00,120,Bring some songs to share or sit back and enjoy the musical stylings of fandom!,open filk,music,,,,,,,,,,,,,,,,,,
 229,"The Rock N' Roll Devil ""Pete Mako""",,McKinley A,2018-03-09,22:00,60,"Music about Monsters, cars, Pop Culture, and all wrapped up in devil horns. Original and cover music in an acoustic setting.",performance,music,,66,P. Mako,,,,,,,,,,,,,,,
 60,Gaming (24/7),,Hayes & Pre-Fun,2018-03-10,00:00,1440,,gaming,,,,,,,,,,,,,,,,,,,
-61,Security & Ops (24/7),,Virgo,2018-03-10,00:00,1440,,operations,,,,,,,,,,,,,,,,,,,
+61,Operations (24/7),,Hospitality Suite 185,2018-03-10,00:00,1440,,operations,,,,,,,,,,,,,,,,,,,
 62,Berd,,Hayes & Pre-Fun,2018-03-10,08:00,60,“Berd” is a fast pace strategy game for 2-6 players. The game has a simple but unique playing concept with many options for move. It is very entertaining and competitive game that provides you much enjoyment and fun. Please visit www.berdgame.com for more information.,gaming,strategy,,50,M. Mikaelian,,,,,,,,,,,,,,,
 63,Pathfinder Society Academy (Ages 6-17),,Hayes & Pre-Fun,2018-03-10,08:00,120,"Welcome to Pathfinder Society Academy, a part of the Pathfinder Society set aside for new players from ages 6 to 17. It is designed to introduce organized play using the Pathfinder RPG Beginner Box and the Pathfinder Roleplaying Game, provide a positive gaming experience for young players, and support youth-friendly content.",gaming,Pathfinder ,,5,A. Melone,,,,,,,,,,,,,,,
 64,PFS #26: Lost at Bitter End (7-11),,Hayes & Pre-Fun,2018-03-10,08:00,240,"A Pathfinder Society Scenario designed for 7th to 11th level characters (Tiers: 7–8 and 10–11).
@@ -96,7 +96,7 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 70,Berd,,Hayes & Pre-Fun,2018-03-10,09:00,60,“Berd” is a fast pace strategy game for 2-6 players. The game has a simple but unique playing concept with many options for move. It is very entertaining and competitive game that provides you much enjoyment and fun. Please visit www.berdgame.com for more information.,gaming,strategy,,50,M. Mikaelian,,,,,,,,,,,,,,,
 71,ConSuite,,Garfield B/C,2018-03-10,09:00,1020,,ConSuite ,,,,,,,,,,,,,,,,,,,
 72,Magneto Mayhem!,,Grant B/C,2018-03-10,09:00,90,Tap into your inner mutant and harness the power of metal. Use your new mutant ability to traverse your way through the city and beat the X-Men before they beat you. (ages 5+),kids prog,gaming,,,,,,,,,,,,,,,,,,
-73,Registration,,Garfield B/C,2018-03-10,09:00,780,,Registration,,,,,,,,,,,,,,,,,,,
+73,Registration,,Garfield A/B,2018-03-10,09:00,780,,Registration,,,,,,,,,,,,,,,,,,,
 74,Berd,,Hayes & Pre-Fun,2018-03-10,10:00,60,“Berd” is a fast pace strategy game for 2-6 players. The game has a simple but unique playing concept with many options for move. It is very entertaining and competitive game that provides you much enjoyment and fun. Please visit www.berdgame.com for more information.,gaming,strategy,,50,M. Mikaelian,,,,,,,,,,,,,,,
 75,Exhibit Hall,,Hayes,2018-03-10,10:00,540,,vendors,,,,,,,,,,,,,,,,,,,
 76,Keep the Hive Alive!,,Hayes & Pre-Fun,2018-03-10,10:00,120,"“Keep the Hive Alive!” is a turn-based strategy game where two to six players serve as the “hive mind” of one honeybee hive each. With the option of collaborating or competing, players must collect enough resources to survive the impending winter (which begins at the end of 12 – 18 rounds depending on the number of players) and keep their hive alive against randomly generated natural and anthropogenic threats. This gorgeous game sports an art style that has not been used in contemporary gaming to date: linoleum cut printing. Our art is done by hand using paper, ink, and hand-drawn and cut reliefs to evoke an earthy, natural feel. All of our gaming mechanics are derived from actual honeybee behavior so that this game can serve as a teaching tool as well as a source of fun, rivalry, and partnership among friends and family. “Keep the Hive Alive!” emphasizes replayability: you would have to play this game hundreds of times to recreate a scenario which you have seen before.",gaming,strategy,,7,A. Prybyla,,,,,,,,,,,,,,,
@@ -223,7 +223,7 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 225,"Cosplayers, Cocktails & Questions!",ADDITION,Pres Boardroom,2018-03-10,22:00,60,,cosplay,panel,,92,Knightmage,86,Mogchelle,87,Princess Morgan,90,Stitches,94,M. Harpster,,,,,,,
 113,There's More in Your Closet Than You Think,MOVED,Pegasus,2018-03-11,11:00,60,Using and repurposing items for costumes.,panel,cosplay,,67,P. Textor,70,S. Bauer,46,M. Engelhardt,85,W. Kincade,,,,,,,,,
 172,Gaming (24/7),,Hayes & Pre-Fun,2018-03-11,00:00,840,,gaming,,,,,,,,,,,,,,,,,,,
-173,Security & Ops (24/7),,Virgo,2018-03-11,00:00,900,,operations,,,,,,,,,,,,,,,,,,,
+173,Operations (24/7),,Hospitality Suite 185,2018-03-11,00:00,900,,operations,,,,,,,,,,,,,,,,,,,
 175,ConSuite,,Garfield A/D,2018-03-11,09:00,360,,consuite,,,,,,,,,,,,,,,,,,,
 176,Marvelous Markers,,Grant B/C,2018-03-11,09:00,60,"Moms and Dads, kids and sidekicks, come and relax from your epic weekend 
  con-adventure and de-stress with crayons and coloring books. Adult & kids books will be available. (all ages)",kids prog,,,,,,,,,,,,,,,,,,,
@@ -234,7 +234,7 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 179,PFS #9–15: The Bloodcove Blockade (3-7),,Hayes & Pre-Fun,2018-03-11,09:00,240,"A Pathfinder Society Scenario designed for levels 3–7.
  The Aspis Consortium has poached relics from the Mwangi Expanse for decades, but the organization has recently identified a wealth of rare minerals deep in the Kaava Lands. The biggest catch is that the Society is familiar with this area, and a massive mining operation like the one the Consortium's planning wouldn't just disrupt local cultures; it risks unleashing a powerful fiend the Pathfinder Society narrowly kept sealed away.
  Such a large operation is beyond the capacity of a few agents to stop. Instead, the Exchange is armed and ready to strangle Bloodcove's imports to shut down the Consortium's plan before it can inflict too much damage. For this maneuver to work, though, the Exchange needs allies and intelligence within Bloodcove, made all the more essential now that the Society's sole agent in Bloodcove has disappeared.",gaming,Pathfinder,,29,G. Melone,,,,,,,,,,,,,,,
-180,Registration,,Garfield B/C,2018-03-11,09:00,360,,Registration,,,,,,,,,,,,,,,,,,,
+180,Registration,,Garfield A/B,2018-03-11,09:00,360,,Registration,,,,,,,,,,,,,,,,,,,
 181,SFS #1-08: Sanctuary of Drowned Delight (3-6),,Hayes & Pre-Fun,2018-03-11,09:00,240,"A Starfinder Society Scenario designed for levels 3–6.
  In order to retrieve valuable resources necessary to repair the Wayfinders' flagship, the PCs follow-up on another team's investigative mission to a long-abandoned Starfinder Society lodge on a world in the Vast. Finding the lodge submerged and already partially flooded, the PCs quickly realize they are far from alone in the depths of the distant world's ocean.",gaming,Starfinder,,29,G. Melone,,,,,,,,,,,,,,,
 182,The Lost Crypt of Andophine the Foul,,Hayes & Pre-Fun,2018-03-11,09:00,240,"Rumors, whispers, even dreams have drawn you to the site. You wait anxiously as the full moon rises over the clearing you and the other adventurers are standing in. As it clears the trees, the glyphs in front of you begin to glow with Arcane energy. You step forward and whisper the command word you've learned for this. You've only got 4 hours to get in, get the loot, and get out before you're trapped inside. The energy flares up around you and you disappear from the clearing...",gaming,,,64,P. Epps,,,,,,,,,,,,,,,
@@ -272,3 +272,7 @@ id,title,status,loc.0,date,time,mins,desc,tags.0,tags.1,tags.2,people.0.id,peopl
 230,Surviving the Zombie Apocalypse,ADDITION,McKinley B,2018-03-10,12:00,60,,guest,panel,authors,89,S. McGuire,,,,,,,,,,,,,,,
 231,Worbla Workshop,ADDITION,Con Suite,2018-03-11,12:00,60,,,,,,,,,,,,,,,,,,,,,
 232,There's More in Your Closet Than You Think,ADDITION,Pegasus,2018-03-10,13:00,60,Using and repurposing items for costumes.,panel,cosplay,,67,P. Textor,70,S. Bauer,46,M. Engelhardt,85,W. Kincade,,,,,,,,,
+233,Security ,,Garfield B/C,2018-03-09,10:00,720,,,,,,,,,,,,,,,,,,,,,
+234,Security ,,Garfield B/C,2018-03-10,09:00,780,,,,,,,,,,,,,,,,,,,,,
+235,Security ,,Garfield B/C,2018-03-11,09:00,360,,,,,,,,,,,,,,,,,,,,,
+236,Silent Auction Final Hour,ADDITION,McKinley C,2018-03-10,18:00,60,"The silent auction ends at 7:00 PM, and no bids will be allowed after that point. Don't miss your last chance to bid!",,,,,,,,,,,,,,,,,,,,
