@@ -25,7 +25,7 @@ ISC license:
 
 ## Description
 
-[KonOpas] is a front end for the programme of a convention, conference or any
+[KonOpas] is a front end for the program of a convention, conference or any
 other single- or multi-track event. It's written in JavaScript, and it works in
 practically all modern browsers, including those on mobile phones. It can use
 HTML5 caching to make itself available even without a live net connection, and
@@ -33,13 +33,13 @@ it remembers your item selections across sessions.
 
 The hosting requirements for KonOpas are minimal, as all the processing is done
 by the browser; all the files are served statically. Some back-end scripting may
-be required if you require live updates of the programme during the event.
+be required if you require live updates of the program during the event.
 
 Built and tested for a growing number of large and small conventions and
 conferences, KonOpas is about as easy to use as possible. With automatic filter
 rule generation from your data, KonOpas can be set up for your event by just
 adding your name and logo to an HTML file, along with pointers to your
-programme and participant data.
+program and participant data.
 
 The open-source KonOpas client can also talk with a dedicated KonOpas server.
 The server enables item sync across different browsers, devices and calendar
@@ -55,8 +55,8 @@ For links to example instances of KonOpas, take a look at the links from our
 
 ## Getting Started
 
-As KonOpas is a front end for your event's programme, you'll need to actually
-manage your programme with a different tool. So far we've got built-in
+As KonOpas is a front end for your event's program, you'll need to actually
+manage your program with a different tool. So far we've got built-in
 integration with at least [Conference Planner]/[Grenadine] and [Zambia], with
 more to come. For smaller events, a simple [PHP script] is available for
 fetching data from a publicly readable Google Drive Spreadsheet and converting
@@ -79,10 +79,10 @@ compile the code yourself---instructions for that are in the following section.
 [KO-repo]: https://github.com/eemeli/konopas
 
 
-Once you've got your programme data in the [proper format][KO-fmt], you should
+Once you've got your program data in the [proper format][KO-fmt], you should
 just change the `<script>` tags at the bottom of `index.html` to point to your
 data, and open the page in a web browser. If all goes well, you should see your
-programme nearly ready to use! If there are problems, the first place to look
+program nearly ready to use! If there are problems, the first place to look
 for more information is your browser's developer console.
 
 To start customizing KonOpas for your event, edit the HTML file by replacing

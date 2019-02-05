@@ -5,7 +5,7 @@ const Wreck = require('wreck');
 const Fs = require('fs');
 const Promise = require('bluebird');
 
-const key = '107zQ3ozkJuck4KQQnOXRGu4hQGpGVIClXgKNNCot7ds';
+const key = '1Vrl3LKmi5Y-3G792_8tv9BK2IQZDiZ5phGwxex7iANM';
 const config = [
   {
     key,
@@ -35,7 +35,7 @@ function getUri(key, gid) {
 };
 
 function checkForValidPayload(payload) {
-  const regex = new RegExp('<html.*<head.*</head>.*<body.*</body>.*</html>', 's');
+  const regex = new RegExp('<html.*<head.*</head>.*<body.*</body>.*</html>', 'si');
   if (regex.test(payload.toString('utf8'))) {
     throw('ERROR: CSV content appears to be an HTML page.\n' + 
           'Please set document permissions to be publicly accessible via link without any username or password.');
