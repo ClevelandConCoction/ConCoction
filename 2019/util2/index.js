@@ -77,7 +77,8 @@ function processCSV(data) {
             meta[column][index] = meta[column][index] || `${item.length}`; // Note: '0' is truthy
             init(item, +meta[column][index], {})[field] = value;
           } else {
-            item[index] = value;
+            // item[index] = value;
+            isIndexed ? item.push(value) : item[index] = value;
           }
         }
         delete row[name];
