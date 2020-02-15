@@ -1,10 +1,9 @@
-'use strict;'
+'use strict';
 
 const csv = require('csv');
 const Wreck = require('wreck');
 const Fs = require('fs');
 const Promise = require('bluebird');
-
 
 const key = '1Pbrc3tprUybuHAhv1i-Oqnzv0VtGp4W6QwW3ueKn6Bc';
 const config = [
@@ -78,7 +77,6 @@ function processCSV(data) {
             meta[column][index] = meta[column][index] || `${item.length}`; // Note: '0' is truthy
             init(item, +meta[column][index], {})[field] = value;
           } else {
-            // item[index] = value;
             isIndexed ? item.push(value) : item[index] = value;
           }
         }
