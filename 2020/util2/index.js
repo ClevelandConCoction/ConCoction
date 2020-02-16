@@ -5,7 +5,7 @@ const Wreck = require('wreck');
 const Fs = require('fs');
 const Promise = require('bluebird');
 
-const key = '1Pbrc3tprUybuHAhv1i-Oqnzv0VtGp4W6QwW3ueKn6Bc';
+const key = '1FzbOj7h__OO8_-TxVeMP1xrkXmJWkRXTpRHWW2KkQfQ';
 const config = [
   {
     key,
