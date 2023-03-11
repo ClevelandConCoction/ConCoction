@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="konopas.appcache">
+<html data-last-updated="konopas.appcache">
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="skin/konopas.css">
@@ -460,7 +460,8 @@ var konopas = new KonOpas({
 	'default_duration': 0,
 	'time_show_am_pm': true,
 	'show_all_days_by_default': true,
-	'use_server': false
+	'use_server': false,
+	'cache_refresh_interval_mins': 10
 });
 konopas.set_program(program, {
 	'day': {},
