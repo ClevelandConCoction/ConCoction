@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html data-last-updated="konopas.appcache">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="skin/konopas.css">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+
+<!-- Android + favicon -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="196x196" href="data/favicon.192.png">
+
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!--
+<link rel="apple-touch-icon"                 href="data/icon.apple.60.png">
+<link rel="apple-touch-icon" sizes="76x76"   href="data/icon.apple.76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="data/icon.apple.120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="data/icon.apple.152.png">
+<link rel="apple-touch-startup-image" href="data/start.apple.1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="data/start.apple.2048x1496.png" media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="data/start.apple.768x1004.png"  media="(device-width: 768px) and (orientation: portrait)">
+<link rel="apple-touch-startup-image" href="data/start.apple.1024x748.png"  media="(device-width: 768px) and (orientation: landscape)">
+<link rel="apple-touch-startup-image" href="data/start.apple.640x920.png"   media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)">
+<link rel="apple-touch-startup-image" href="data/start.apple.320x460.png"   media="(device-width: 320px)">
+-->
+
+<!-- Windows Phone 8.1 -->
+<!--
+<meta name="msapplication-TileColor"         content="#ffffff">
+<meta name="msapplication-square70x70logo"   content="data/icon.ie.png">
+<meta name="msapplication-square150x150logo" content="data/icon.ie.png">
+<meta name="msapplication-square310x310logo" content="data/icon.ie.png">
+-->
+
+<title>ConCoction 2024 Program Guide</title>
+
+<body><div id="top"></div>
+<div id="load_disable"></div>
+
+<div id="time"></div>
+<div id="scroll"><a href="#top" id="scroll_link" data-txt>Scroll up</a></div>
+
+<div id="banner">
+<div id="server_connect"></div>
+
+<h1><a href="#info" alt="Cleveland ConCoction 2024" title="Cleveland ConCoction 2024">
+<img id="title-small" src="data/title.png" style="width: 240px;">
+<img id="title" src="data/title.png" style="width: 200px;"></a></h1>
+
+<ul id="tabs">
+<li id="tab_star"><a href="#star" data-txt>My Events</a>
+<li id="tab_prog"><a href="#" data-txt>Program</a><div id="day-sidebar" class="sub-side"></div>
+<li id="tab_part"><a href="#part" data-txt>People</a><div id="part-sidebar" class="sub-side"></div>
+<!--
+<li id="tab_more01"><a href="#more01" data-txt>Vendors</a>
+-->
+<li id="tab_info"><a href="#info" data-txt>Info</a>
+</ul>
+
+<div id="refresh"><i class="refresh_icon"></i><span data-txt>Refresh data</span></div>
+</div>
+
+<div id="main">
+<!--
+<div id="more01_view" class="view info_view">
+<style>
+  // a, .nolink { display: inline-block; }
+  // a img, a span, .nolink img, .nolink span { vertical-align: middle; margin-right: 10px; }
+  .bizimg { float: right; margin-left: 10px; }
+  .bizname { display: block; clear: both; margin-top: 30px; }
+  // p { margin-top: 5px; ; margin-bottom: 10px; }
+</style>
+<p style="text-align: center;"><u>Exhibit hall hours:</u>
+  Friday 12pm-8pm
+  Saturday 10am-7pm
+  Sunday 10am-2:30pm
+</p>
+-->
+<!-- Vendors -->
+
+<!-- Vendor Template
+  <a class="bizname" href="BIZLINK" target="_blank">BIZNAME</a>
+  <div>
+  <a class="bizimg" href="BIZLINK" target="_blank">
+    <img height="100" src="images/BIZIMAGE"/>
+  </a>
+  <p>BISDESC1
+  <p>BIZDESC2
+  </div>
+-->
+<!--
+</div>
+-->
+<div id="star_view" class="view">
+	<div id="star_data"></div>
+</div>
+
+<div id="prog_view" class="view">
+	<div id="prog_filters" class="filters">
+		<div id="prog_lists"></div>
+		<form name="search" id="search">
+			<input type="text" id="q" required data-txt="Search" data-txt-attr="placeholder">
+			<div id="q_ctrl">
+			<input type="submit" id="q_submit" data-txt="Go" data-txt-attr="value">
+			</div>
+			<div id="q_hint" class="hint"></div>
+			<div id="filter_sum_wrap">
+				<input type="reset" id="q_clear" data-txt="Clear all" data-txt-attr="value">
+				<div id="filter_sum"></div>
+			</div>
+		</form>
+	</div>
+	<div id="day-narrow" class="sub-narrow"></div>
+</div>
+
+<div id="part_view" class="view">
+	<div id="part-narrow" class="sub-narrow"></div>
+	<ul id="part_names"></ul>
+	<div id="part_info"></div>
+</div>
+
+<div id="info_view" class="view">
+<p>This is the program guide for <a href="http://www.clevelandconcoction.org">Cleveland ConCoction 2024</a>. It should be suitable for use on most browsers and devices. It's an instance of <a href="http://konopas.org/">KonOpas</a>, an open-source project providing conventions with easy-to-use mobile-friendly guides.
+
+<p><div id="last-updated">Program and participant data were last updated <span></span>.</div>
+
+<div id="install-instructions">
+<p>This guide will work in your browser even when you don't have an internet connection.
+<h4 class="collapse">You can also install it as a home screen app</h4>
+<dl class="compact-dl">
+<dt>Safari on iPhone/iPad<dd>Tap on <i class="ios_share_icon"></i> (share), then tap <b>Add to Home Screen</b>.
+<dt>Chrome on Android<dd>Tap on <i class="android_menu_icon"></i> (menu), then tap <b>Add to Home Screen</b>.
+<dt>Firefox on Android<dd>Tap on <i class="android_menu_icon"></i> (menu), then tap <b>Bookmark</b> and select <b>Options</b>, and <b>Add to Home Screen</b>.
+<dt>IE on Windows Phone<dd>Tap on <i class="ie_menu_icon"></i> (menu), then tap <b>Pin to Start</b>
+</dl>
+</div>
+<script>
+if (navigator.standalone) document.getElementById('install-instructions').style.display = 'none';
+</script>
+
+<!-- SAMPLE SECTIONS FOR "INFO" VIEW, UNCOMMENT TO SEE -->
+<style>
+#map { width: 100% !important; }
+#map td { text-align: center !important; padding: 6px 32px; }
+#map a, #map span { font-family: 'Oswald'; font-weight: 400; font-size: 1.2em; cursor: pointer; }
+#map a:hover, #map span:hover { text-decoration: underline; }
+#map tr:hover, .quick-ref tr:hover { background: inherit !important; }
+.quick-ref dt { margin: 6px 0 3px; font-weight: bold; font-size: 120%; }
+.quick-ref table { width: auto !important; border-spacing: 0; margin-bottom: 6px; }
+.quick-ref td { text-align: left !important; vertical-align: top !important; }
+#info_view .quick-ref td.c { text-align: center !important; }
+.quick-ref td:nth-child(2) { text-align: right !important; vertical-align: top !important; padding: 0 0 0 5px; }
+.quick-ref td:nth-child(3) { padding-left: 0; }
+.quick-ref td.location { text-align: left !important; font-weight: bold; }
+</style>
+
+<h2>Bertram Inn &amp; Conference Center Maps</h2>
+<table id="map">
+<tr><td><a class="popup-link" href="data/Bert%20hotel.jpg">Overview (Hotel and Annex)</a></td></tr>
+<tr><td><a class="popup-link" href="data/bert-plan-12_orig.jpg">Detail: Hotel</a></td></tr>
+<tr><td><a class="popup-link" href="data/bert_plan_1.jpg">Detail: Annex</a></td></tr>
+<tr><td><a class="popup-link" href="data/Bert%20site%202.jpg">Street View</a></td></tr>
+</table>
+
+<h2>Share this app!</h2>
+<table>
+<tr><td><a class="popup-link" href="data/qr-code.png">QR code</a></td></tr>
+</table>
+
+
+<h2>Links</h2>
+<ul>
+<li><a href="http://www.clevelandconcoction.org/">Cleveland ConCoction</a>
+</ul>
+
+<h2>Quick Reference</h2>
+<dl class="quick-ref">
+
+<dt>Vendor Hall
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">McKinley A &amp; B
+<tr><td>Friday<td>12:00pm-<td>8:00pm
+<tr><td>Saturday<td>10:00am-<td>7:00pm
+<tr><td>Sunday<td>10:00am-<td>2:30pm (pick-up and payments only)
+</table>
+<dd><p>You can shop 'til you drop in the Exhibit Hall. Forget about the crowds and long lines on Black Friday; find those one-of-a-kind holiday gifts at this one-weekend-a-year mall. With a wide variety of things to buy, you are sure to find something for your friends and family. Among the items will be books, jewelry, buttons, records, videotapes, DVDs, magazines and more. And yes, many dealers do take plastic! So keep your credit card warm and be ready to shop!
+<p>Note: shoppers in the Exhibit Hall may NOT bring in food or beverages.
+
+
+<dt>Artist Alley
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">McKinley C
+<tr><td>Friday<td>12:00pm-<td>8:00pm
+<tr><td>Saturday<td>10:00am-<td>7:00pm
+<tr><td>Sunday<td>10:00am-<td>2:30pm
+</table>
+<dd><p>Our Artist Alley features on-site artists and mail-in art with focuses in fantasy, scifi, gaming, comics and more! Come down the Alley and see the art of some awesomely creative people. Various media and styles give us something for everyone. Come enjoy the visual arts, meet our artists and take home something special for you!
+
+<p><b>General Art Room Rules:</b>
+<p>Do not touch the artwork without express permission from the artist.
+<p>Do not take pictures of the artwork. Pictures in the room are allowed, as long as permission has been given by the artist, if any artwork is visible in the background.
+<p>No food or drink is allowed in the Art Room.
+
+<p><b>Art Room Silent Auction/Quick Sale Rules:</b>
+<p>All bids are BINDING! Be prepared to pay for ALL auctions won.
+<p>Art Room silent auction minimum bid is $1. Increments larger than $1 are allowed, but all bids must be in $1 increments, and as stated, ALL WINNING BIDS MUST BE PAID.
+<p>If you really want something, bid on it, or purchase it at the “Quick Sale” price, if valid. Check back periodically. 
+<p>Buy it Now/Quick sale:
+<ul>
+  <li>If an item is not bid on, the quick sale (if the item is available for quick sale per the artist) price is valid. Once that price is paid, that item is SOLD. 
+  <li>Once an item is bid on, the auction starts, and the quick sale price is NO LONGER valid. 
+  <li>Items not bid on may be sold at the quick sale price after the auction has ended, until the art room closes on Sunday.
+</ul>
+If an item is purchased at the quick sale price, the art room requests that the piece remain on display until the close of the room on Sunday, whenever possible. 
+<p>Items with no bids may be available for purchase on Sunday, please check with Auction staff.
+<p>If you accidentally write your bid on the wrong sheet, line it out completely. Notify Auction staff.
+<p>Don't bid with another convention member's badge number unless you have permission (i.e. spouse, significant other). If you bid on it without permission, and the auction is won, YOU are responsible for payment.
+<p>No bids will be allowed past the posted end of auction.
+<p>Do NOT rearrange auction items or bid sheets. 
+<p>Report discrepancies to the organizers ASAP. (i.e. missing items, missing bid sheets, duplicated #s, is it 66 or 99?)
+<p>If you are ever unsure about a rule, please ask Art Room/auction staff. We're here to help!
+
+
+<dt>Authors Alley
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Grant A &amp; B
+<!--
+<tr><td>Friday<td>1:00pm-<td>9:00pm
+<tr><td>Saturday<td>11:00am-<td>10:00pm
+-->
+<tr><td>Friday<td>12:00pm-<td>8:00pm
+<tr><td>Saturday<td>10:00am-<td>7:00pm
+<tr><td>Sunday<td>10:00am-<td>2:30pm
+</table>
+<dd>At Cleveland ConCoction, the Authors Alley is a wonderful place to meet guest authors, discuss writing projects, and find out about upcoming book releases. Fans and writers can speak with local publishers, spend time with some of the most revered authors in the publishing industry, and find out about new rising stars. Attendees can purchase books at the Authors Alley Library or directly from the authors. There will be organized book signings for particular authors at established times, but authors often volunteer to do signings in Authors Alley at other times too. There is also a full track of literary panels where authors and convention attendees get to discuss a variety of topics all book lovers share.
+
+<dt>Gaming
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Hayes Pre-Function
+<tr><td>Friday<td>8:00am-<td>10:00pm
+<tr><td>Saturday<td>8:00am-<td>10:00pm
+<tr><td>Sunday<td>8:00am-<td>2:00pm
+</table>
+<dd>
+<p>Beyond the hubbub and hullabaloo of the performances, panels, and various exhibitors lies The Lair. Whether you seek it out or stumble upon it by chance, you've found the center for all things gaming. Whether you love role playing, board games, or cards, you'll find something here to tickle your fancy. Feel free to borrow a game from the Concoction Game Library, try out one of our Play to Win games, or join a scheduled game run by one of our volunteer Game Masters.
+
+<p>When you aren't playing in a scheduled game, we invite you to sign out one of our Play-to-Win games. All we ask is that you give a short review of the game after you're done playing and at the end of Con, someone who played the game will take it home with them. A big thank you also goes out to Double Exposure and the Envoy program for providing so many great Play-to-Win games this year.
+    
+<p>Whether you're playing an old favorite or sitting down to learn a new one, you may find that you have room for one more in your game. We ask that you use the "Player Wanted" flags provided at the gaming desk to advertise your willingness to take on an extra player and maybe make a new friend.
+<!--
+<p>Want to win a free membership to the con next year?<br/>
+Want your name on the coveted Golden Meeple Award?<br/>
+Take a shot at our Name the Game contest. For each correct answer, you will earn an entry into our grand prize drawing to win a free membership to Cleveland Concoction 2021!
+-->
+<p>Beginning this year, we are proud to announce that video gaming is now available in the Lair!  Stop in and challenge a friend or 3 to a game of Mario Kart, Smash Brothers, or Mortal Kombat 11.  Want to really test that hand-eye coordination?  This year we also have the Oculus Quest VR setup with Beat Saber, Fruit Ninja, and Space Pirate Trainer.  Like everything else in gaming, we offer this free of charge, but we do ask you to consider a donation to help cover the cost of bringing these new activities to you.  All profits will be donated directly to Extra Life.
+<!--
+<p>After hours, tables will still be available if people would like to play their own games, but no con staff will be on duty. 
+-->
+<p>Do you love games and gaming? Are you coming back to Concoction next year? Want to score a partial refund on your membership fee? Send an email to volunteers@clevelandconcoction.org and tell them you want to help out in The Lair next year.
+
+<!--TBD verify existence
+<dt>Kids Programming
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Grant Meeting Rooms B &amp; C
+<tr><td>Friday<td>Noon-<td>9:00pm
+<tr><td>Saturday<td>10:00am-<td>1:00am (Sun)
+<tr><td>Sunday<td>10:00am-<td>2:00pm
+</table>
+<dd><p><b>KidCoction Room Rules:</b>
+<p>You are completely and utterly responsible for yourself, your children and your personal belongings.
+<p><b>When leaving a child in the Kid's-Room:</b>
+<p><u>Parents</u>
+<p>You will be required to sign your child in whether you stay or not.
+<p>Photo Release opt-in/out form must be signed before entering the room. If you choose to opt-out of photos you will be given a colored wristband.
+<p>Room waiver must be signed for ALL children being dropped off. Parents are always welcome and we encourage them to attend events along with their children.
+<p>Room waiver and photo release form only need to be filled out once and will be good for all events for the duration of the convention.
+<p>You must have a working cell phone on your person, we will test it at drop off.'
+<p>If your child becomes ill, overly emotional or physically or verbally abusive, you will be called and you must come and collect them. If your child becomes abusive and you are asked to come collect them, they will not be allowed back in the Kid's-Room at all for the duration of the convention. Bullying of any form will NOT be tolerated.
+<p>If your child is currently sick or has been sick in the last 24-48 hours, they will not be allowed in the Kid's-Room. Sick = a high temperature, coughing, vomiting, diarrhea, any contagious disease/ailment: lice, pink eye, etc...
+<p>Parents are responsible for making sure their children know the rules for the Kid's-Room.
+<p>If your child is signed up for several events in a row, you are still required to come back at the end of EACH event and collect your child/ren. This is so that staff can quickly and efficiently break down the room and set up for the next event and also run to the restroom and grab water. We greatly appreciate your cooperation with this. 
+Any unclaimed children at the conclusion of each event will be fed to Cthulhu. Hail Cthulhu! But, seriously, any parent that is contacted on three occasions due to not claiming their child by the beginning of the next event will NOT be permitted to drop their children off for the duration of the convention. 
+You are still very welcome to attend events in the Kid's-Room, but you must stay with your child at all times.
+<p>The Kid's-Room staff are not guaranteed to be CPR certified. They are simply adult volunteers and will not be held liable for any accident that may occur. This is NOT a daycare. Staff members will also not be responsible for any lost or damaged personal items.
+<p><b>For ALL children under the age of 12:</b>
+<p>They MUST be completely &amp; independently potty trained. We do NOT change diapers or help with costume changes. We will however, escort them to the bathroom and back again to the Kid's-Room. Children not yet potty trained must have a parent with them at all times.
+<p>They will NOT have roaming rights. Once you drop them off, they are here until you pick them up at the end of EACH scheduled event.
+<p><b>For ALL children ages 12 and over:</b>
+<p>The same rules apply for the older children as they do for the "Under the Age of 12" children. EXCEPT you may opt for your child to have roaming rights.
+<p>Children with roaming rights MAY:
+<ul>
+<li>freely come and go during a program that they are signed up for.
+<li>sign themselves out of a kids event to go to another event in the convention, BUT, they must indicate on the pick-up sheet AND speak with a staff member to let them know where they are going.
+</ul>
+<p><b>Children with roaming rights MAY NOT:</b>
+<ul><li>Sign themselves INTO a program even if their parents have signed them up for that event.
+</ul>
+-->
+
+<!--TBD verify existence
+<dt>Masquerade
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">McKinley A
+<tr><td>Saturday<td>5:00pm-<td>7:00pm
+</table>
+<dd><p><u>Signup</u>: Signup for pre-judging is online at <a href="http://www.clevelandconcoction.org/costumes--cosplay.html">http://www.clevelandconcoction.org/costumes--cosplay.html</a> or Saturday morning, check at info point when on site.
+<p>Open for anyone! Any theme! Any cosplay genre!
+
+<p><u>Pre-Judging</u>: Our Con is known for its kind and friendly pre-judging! Let the judges know about your outfit and get killer feedback from some of the Midwest best Cosplayers. No need to wait in line - you will be assigned a 10-minute time slot earlier when you sign up. Please make sure you arrive 5-10 minutes early just in case. 
+
+<p><u>Mainstage Show</u>: Saturday 5:00-7:00pm. Strut your stuff on stage where the entire convention can see you. You'll have a chance to show off your cosplay abilities and outfit before being asked a few quick questions by the Judges. Awards will be awarded at the end. You have up to 2 minutes to cosplay your character and perform if you choose to.
+
+<p><b>Costume Rules</b>:
+<p>See here: <a href="http://www.clevelandconcoction.org/costume-contest-rules.html">http://www.clevelandconcoction.org/costume-contest-rules.html</a>
+
+<p><b>Weapon Policy</b>:
+<p>See here: <a href="http://www.clevelandconcoction.org/prop-weapons-policy.html">http://www.clevelandconcoction.org/prop-weapons-policy.html</a>
+
+<dt>Masquerade Judges
+<dd><p>This year's judges are our three Featured Cosplay Guests;
+<p><b>Knightmage, SuperKayce, and TBD</b>
+
+<dt>Master of Ceremonies
+<dd><p>This year's Master of Ceremonies is: <b><del>Vladimir Snape</del>TBD</b>
+-->
+
+<dt>Consuite
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Garfield D
+<tr><td>Friday<td>12:00pm-<td>9:00pm
+<tr><td>Saturday<td>9:00am-<td>10:00pm
+<tr><td>Sunday<td>9:00am-<td>2:00pm (room cleanup begins at 1:00pm)
+</table>
+<dd><p>Always a place to hang out with fellow fans, the Consuite continues the tradition this year. Remember, the Consuite is not meant to provide three squares each day while at the convention. If you are looking for a well-balanced meal, we suggest you check out the hotel restaurants. Room may close early based on usage.
+
+<!--TBD verify existence
+<dt>Lactation &amp; Changing Room
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Hospitality Suite 180
+<tr><td>Friday<td>Noon-<td>6:00pm
+<tr><td>Saturday<td>9:00am-<td>6:00pm
+<tr><td>Sunday<td>9:00am-<td>3:00pm
+</table>
+<dd><p>Being such a family friendly convention, we can't forget about the moms and dads who like a bit more privacy to change and feed the little ones. This is a hotel guest room, not a convention room, that the hotel is giving to us for this purpose. Please take a moment to thank our hotel for this service!
+-->
+
+<dt>Charity Silent Auction
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">McKinley A &amp; B
+<tr><td>Friday<td>Noon-<td>8:00pm
+<tr><td>Saturday<td>10:00am-<td>7:00pm
+<tr><td>Sunday<td>10:00am-<td>2:30pm
+</table>
+<dd><p>Cleveland ConCoction believes in building up our local community as well as supporting and building up the community at large. This year we are holding a silent auction to assist local charities. When gamers and geeks unite we can make dreams a reality! Silent auction bidding ends one hour before the room closes on Saturday. Pick up at silent auction end or all day Sunday.
+
+<dt>Operations
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Room 185
+<tr><td>Friday<td>7:00pm-<td>Midnight
+<tr><td>Saturday<td>24-hours&nbsp;
+<tr><td>Sunday<td>Midnight-<td>2pm
+</table>
+<dd><p>Known as the department that never sleeps, Ops and Security are there to help with questions and concerns. Lost your tribble? Want to volunteer for the con? Need directions? The folks in Ops are there to help. Our Security staff will man the doors at Main Programming and elsewhere to check for con badges. Please be considerate and follow directions.
+
+<!--TBD verify existence
+<dt>Security
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Garfield Meeting B & C
+<tr><td>Friday<td>10:00am-<td>10:00pm
+<tr><td>Saturday<td>9:00am-<td>10:00pm
+<tr><td>Sunday<td>9:00am-<td>3:00pm
+</table>
+<dd><p>Known as the department that never sleeps, Ops and Security are there to help with questions and concerns. Lost your tribble? Want to volunteer for the con? Need directions? The folks in Ops are there to help. Our Security staff will man the doors at Main Programming and elsewhere to check for con badges. Please be considerate and follow directions.  
+<p>Note: After hours, you may find Security in the Operations room (Hospitality Suite 185).
+-->
+
+<dt>Registration
+<dd><table>
+<tr><td>Location:<td colspan="2" class="location">Garfield B &amp; C
+<tr><td>Friday<td>10:00am-<td>10:00pm
+<tr><td>Saturday<td>9:00am-<td>10:00pm
+<tr><td>Sunday<td>9:00am-<td>3:00pm
+</table>
+<dd><p>If you're pre-registered, you get a cool custom-printed laminated "keepsake" name badge with a lanyard to wear around your neck.
+<p>A con badge is required for all Cleveland ConCoction activities, so DO NOT LOSE YOUR BADGE. No refunds. No exchanges. By accepting this badge, you agree to comply with Cleveland ConCoction "Terms of Attendance" in this program guide. (See next section)
+<p>Announced guests and schedules are subject to change. Because of this, please consult any announcements on session room doors or at Registration.
+
+<dt>Terms of Attendance
+<dd><p>By purchasing a membership to the Cleveland ConCoction (CleCon) convention, the attendee agrees to comply with the following rules and regulations:
+<ol><li>Each membership admits one person to the convention. Autographs are NOT included with membership.
+<li>Con badges must be worn on the outside of all clothing/costumes and must be presented when entering any part of the convention.
+<li>Your CleCon badge is non—refundable, non-exchangeable and non-transferrable, no matter what the reason. CleCon will not be responsible for lost or stolen ID badges and a badge can only be replaced by
+purchasing an additional admission.
+<li>All members hereby release CleCon, its organizers, and agents from any liability for loss or damage to persons or property, infringement of any right or any other claim or course of action of any kind.
+<li>The organizers, staff and agents of CleCon reserve the right to deny entry to or remove from the convention facilities any person behaving or threatening to behave in a manner which could reasonably be considered disruptive.
+<li>Children age 12 and under must be accompanied by an adult at all times. Any children dropped off at Cleveland ConCoction, and found wandering unattended, will be turned over to hotel staff.
+<li>By accepting the conditions of membership, you may be videotaped or photographed for future promotion of CleCon.
+</ol>
+
+<dt>Harassment Policy
+<dd><p>Cleveland ConCoction is committed to providing a safe and welcoming convention experience for ALL persons. In accordance with this, we are dedicated to ensuring a harassment free convention for all attendees.
+<p>Harassment is any form of behavior that is unwelcome, unreciprocated, or unsolicited which makes an unpleasant, humiliating, or intimidating environment for the person who is the target of that behavior.
+<p>Harassment includes, but is not limited to, offensive verbal comments, deliberate intimidation, stalking, following, unwelcome photography or videography, inappropriate physical contact, and unwelcome sexual attention.
+<p>Attendees asked to stop any harassing behavior are expected to comply immediately.
+<p>Attendees who feel they are victim of harassment are asked to firmly and decisively say NO, and report the behavior to ConCoction Security or Staff immediately.
+<p>Attendees witnessing harassing behavior are asked to contact ConCoction Security or Staff immediately.
+<p>All reports of harassment will be investigated by ConCoction Staff.
+<p>Any attendee found in violation of this policy will be given a warning, removal from the convention without refund, or reported to local law enforcement, at the discretion of ConCoction Staff.
+<p><img style="max-width:100%; max-height:100%;" src="data/CosplayIsNotConsent.png">
+
+<dt>Weapons Policy
+<dd><ol>
+<li>Blades: No live steel. ConCoction defines live steel as any metal weapon CAPABLE of holding an edge.
+<li>Projectile Weapons: No live projectile weapons. This includes, but is not limited to, airsoft guns, ping pong ball guns, silly string guns and squirt guns.
+<li>Prop Guns, even those that are not realistic looking, MUST have an orange tip. All prop guns will need to be brought to the Security Office prior to being worn or carried in the convention areas. Triggers will be zip-tied by Security.
+<li>Personal Protective Devices of any kind are not allowed. This includes, but is not limited to, mace,
+pepper spray and tasers.
+<li>No flammables. This includes, but is not limited to, lighter fluid, flash powder and fireworks.
+<li>Long Weapons: any long weapon, or weapon like object, such as walking sticks, staffs, pikes or lances MUST be less than six feet in length. If any such prop, even if shorter than six feet, becomes an impedance to flow of traffic around the Convention it will be deemed in violation of this policy.
+<li>It is the responsibility of Convention Attendees to ensure that prop weapons comply with these policies. If you are not sure, ASK. We will have Security Staff at Registration during peak check in times to inspect weapons. If you are checking in during an off-peak time, or if the Security Staff is not at Registration, ask whomever is at Registration and they will locate a member of Security Staff to assist you.
+<li>It is the responsibility of any vendor selling prop weapons to ensure that all weapons are packaged in boxes or wrapped in paper at the time of sale; and it is the responsibility of any purchaser of weapons to IMMEDIATELY remove weapons in violation of this policy from the convention to either a guest room at the hotel or a personal vehicle.
+<li>All local laws and regulations regarding weapons will be in effect at all times.
+<li>Anyone found using a weapon (real, prop or improvised) in a threatening manner will be in violation of this policy.
+</ol>
+<p>At the discretion of Convention Staff, exceptions to the above rules will be made for the purposes of the Masquerade Ball and for photo opportunities in DESIGNATED times and places only. All weapons carried around the hotel premises for the Masquerade Ball or photo opportunities must be transported to the designated site in a manner consistent with the weapons sale policy listed above.
+<p>Convention and Hotel Staff will have the final decision making authority in all matters regarding weapons.
+<p>Anyone found in violation of the ConCoction Weapons Policy will be, at the discretion of Convention Staff, asked to remove the offending weapon from the premises, removed from the Convention without refund, or reported to local law enforcement.
+
+<dt>Taking Care of Your Self: The 5-2-1 Rule
+<dd><p>The 3-2-1 Rule is simple and should be followed daily by all attendees. Doing so will allow you to enjoy the con to its fullest and prevent the spread of con crud and con funk. Also known as the 5-2-1 rule, for those of us who need a bit more rack time.
+<p><b>5 hours of sleep (minimum)</b>
+<p>Get at least 5 hours of sleep. Preferably in a bed, doesn't have to be yours (but you DO have to have permission if it's not). See our article on hotels. It's considered rude to sleep in panels, especially ones with a capacity crowd. Sleep somewhere. And note that caffeine is not an appropriate substitute for sleep, no matter how much you've had.
+<p><b>2 meals (minimum)</b>
+<p>Eating is important. It's how our body gets energy. Eat full meals at least twice during the day. There are local restaurants, the Consuite, and restaurants in the hotels. Protein bars are not good substitutes; they may seem like a good and cheap idea beforehand, but you will tire of them.
+<p>Keep in mind, though, that overeating can be just as bad as not eating. Try for the healthy options now and then, like a salad, or a chicken sandwich instead of a hamburger (preferably not deep fried). Heavier foods seem more satisfying in the gut at the time, but in the long run, eating less fatty, greasy food will help keep your energy up better.
+<p><b>1 shower (minimum)</b>
+<p>For the love of &lt;insert Deity of choice here&gt;, take a shower. Con Funk is not pleasant for your fellow geeks around you. It's gross, disgusting, and all around bad form. Showers are free to all hotel guests. If you don't have a room, ask a friend to use their shower. Make sure to use soap. Standing under a stream of warm water for 30 seconds is not showering.
+<p>Patchouli oil, extra deodorant, FeBreeze, cologne, or a fresh change of clothes does not replace a shower 100%, or even 10%. Shower! Even the Klingon giving you the eyes from across the bar likes to think you have showered.
+<p><img style="max-width:100%; max-height:100%;" src="data/BathTime.png">
+
+</dl>
+
+
+<!-- END SAMPLE SECTIONS FOR "INFO" VIEW -->
+
+</div>
+
+
+<div id="prog_ls" class="ls"><br><div class="ls_loading">Loading program data&hellip;</div></div>
+
+</div><!-- /main -->
+
+<script src="data/program.js"></script>
+<script src="data/people.js"></script>
+<script src="konopas.min.js"></script>
+<script>
+var konopas = new KonOpas({
+	'id': 'ConCoction2024',
+	'default_duration': 0,
+	'time_show_am_pm': true,
+	'show_all_days_by_default': true,
+	'use_server': false,
+	'cache_refresh_interval_mins': 10
+});
+konopas.set_program(program, {
+	'day': {},
+	'area': {},
+	'tag': {}
+});
+konopas.set_people(people);
+konopas.set_view();
+</script>
