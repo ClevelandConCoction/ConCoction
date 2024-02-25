@@ -1,1 +1,1 @@
-var program = [{"id":"1","title":"Placeholder","date":"2024-03-08","time":"09:00","mins":"60","desc":"Placeholder","loc":["Lobby"],"people":[{"name":"David Mott","id":"1"}]}];
+var program = [{"id":"1","title":"Placeholder","status":"Rescheduled","date":"2024-03-08","time":"10:00","mins":"60","desc":"Placeholder","loc":["Lobby"],"people":[{"name":"David Mott","id":"1"}]}];
