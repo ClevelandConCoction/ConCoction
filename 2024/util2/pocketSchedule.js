@@ -50,6 +50,7 @@ const timeDiff = (time1, time2 = time1) => {
 };
 
 const getItemHeight = (item1) => {
+  // DPM TODO: consider limiting this to 8 * 20
   return item1.mins / 15 * 20; // 20 px high for each quarter hour
 };
 
@@ -97,8 +98,10 @@ OVERLAP DETECTED:
   // Completely reconstruct the title for existingItem 
   existingItem.title = existingItem.originalTitle;
   existingItem.container.forEach(it => {
+    // DPM TODO: consider limiting the min-height of nested content
     const minHeight = getItemHeight(it);
     const divStyle = `min-height: ${minHeight}px`;
+    // DPM TODO: incorporate a human-readble hh:mm duration into this title
     existingItem.title += `<br/><br/><div class="nested" style="${divStyle}">${it.originalTitle || it.title} ${getDisplayTime(it)}</div>`;
   })
 
@@ -195,6 +198,9 @@ Object.entries(dayGrids).forEach(([_date, {grid}]) => {
 // Generate the HTML
 
 // DPM TODO: See if we can tell table rows to page-break-before: avoid, but tell rows with a rowspan to page-break-before: auto
+// Note: As of Dec 2022, cells are no longer broken across pages. https://issues.chromium.org/issues/40539343
+// This probably means that cells that span rows shouldn't specify a large min-height, and nested content should be made as small as possible.
+// This may also mean that an HTML table may no longer be suitable for rendering printable data. 
 
 const makeTableElement = (elementName, content, attrs=[]) => `<${elementName} ${attrs.join(' ')}>${content}</${elementName}>`;
 const getTR = (content) => makeTableElement('tr', content);
@@ -215,10 +221,10 @@ Object.entries(dayGrids).forEach(([date, {grid, locCounters}]) => {
   const rows = [];
   grid.forEach((_row, timeIndex) => {
     const columns = [''];
-    grid[timeIndex].forEach((item, locIndex) => {
+        grid[timeIndex].forEach((item, locIndex) => {
       if (locIndex === 0) columns.push(getTH(getDisplayTime(item))); // event time
       if (item.skip || !locCounters[item.location]) return;
-      const rowSpan = item.rowSpan ? `rowspan=${item.rowSpan + 1}` : '';
+            const rowSpan = item.rowSpan ? `rowspan=${item.rowSpan + 1}` : '';
       const tdClass = item.title ? '' : 'class="empty"';
       columns.push(
         getTD(
